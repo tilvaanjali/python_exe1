@@ -11,8 +11,6 @@ class Category:
 
     def display_category(self):
         print(self.display_name)
-        """if self.no_of_products == 0:
-            print(self.set_display_name)"""
         print("no_of_products:", self.no_of_products)
         print("products: ", self.products)
         print("--------------------------")

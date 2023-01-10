@@ -6,6 +6,7 @@ while True:
     print("2.Assending order")
     print("3.Dessending order")
     print("4.Quit")
+
     b=int(input("enter choice"))
     if b==1:
         a = int(input("enter total nos:"))
