@@ -88,3 +88,6 @@ category_list = [vehicle, chocolate, food, toy, watch, car, dark_chocolate, pizz
 category_list.sort(key=lambda high_low : high_low.display_name)
 for cat in category_list:
     cat.display_category()
+
+
+
