@@ -15,10 +15,10 @@ class Employee(Department):
         self.department = department
         department.emps += 1
 
-    """def display(self):
+    def display(self):
         print("Name: ", self.name)
         print("Age: ", self.age)
-        print("Department: ", self.department.name)"""
+        print("Department: ", self.department.name)
 
 
 it_dept = Department("IT")
@@ -33,3 +33,6 @@ admin_dept.display()
 emp1.display()
 emp2.display()
 emp3.display()
+
+
+

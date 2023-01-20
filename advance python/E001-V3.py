@@ -42,9 +42,16 @@ class Movement:
         self.to_location = to_location
         self.product = product
         self.quantity = quantity
+        try:
+            # print("{} \n{} > {} {}".format("product name:",self.product.name,"From location:",self.from_location.name,"To Location:",self.to_location.name,"Quntity:",self.quantity))
+            print(f"product name: {self.product.name} \nFrom Location: {self.from_location.name}\nTo Location: {self.to_location.name}\nQuantity: {self.quantity}")
+            print("--------------------")
+        except:
+            print("no any product")
+
     @staticmethod
-    def movements_by_product(self, product):
-        self.product = product
+    def movements_by_product(product):
+        pass
 
 
 # Location object:
@@ -53,7 +60,7 @@ junagadh = Location("Junagadh", "L002")
 jamnager = Location("Jamnager", "Loo3")
 surat = Location("Surat", "L004")
 
-list_of_location=[rajkot,junagadh,jamnager,surat]
+list_of_location = [rajkot, junagadh, jamnager, surat]
 
 # Category Object:
 vehicle = Category("vehicle", "v1")
@@ -63,20 +70,35 @@ toy = Category("toys", "t1")
 watch = Category("watch", "w1")
 
 # Product object:
-product_list = [Product("Car", "v1", vehicle, 5000000, {rajkot: 100, junagadh: 20}),
-                Product("Dark Chocolate", "c1", chocolate, 100, {junagadh: 20}),
-                Product("Bus", "v1", vehicle, 400, {jamnager: 30, surat: 89}),
-                Product("Soft Toy", "t1", toy, 500, {surat: 10}),
-                Product("Women Watch", "w1", watch, 3000, {rajkot: 12}),
-                Product("Chocolate", "c1", chocolate, 80, {surat: 8})]
+vehicle = Product("Car", "v1", vehicle, 5000000, {rajkot: 100, junagadh: 20})
+dark_chocolate = Product("Dark Chocolate", "c1", chocolate, 100, {junagadh: 20})
+bus = Product("Bus", "v1", vehicle, 400, {jamnager: 30, surat: 89})
+soft_toy = Product("Soft Toy", "t1", toy, 500, {surat: 10})
+women_watch = Product("Women Watch", "w1", watch, 3000, {rajkot: 12})
+chocolate = Product("Chocolate", "c1", chocolate, 80, {surat: 8})
 
+product_list=[vehicle,dark_chocolate,bus,soft_toy,women_watch,chocolate]
+
+# Movement object:
+
+movement1 = Movement(rajkot, junagadh, vehicle, 20),
+movement2=Movement(junagadh, surat, dark_chocolate, 50),
+movement3=Movement(jamnager, junagadh, bus, 40),
+movement4=Movement(surat, rajkot, soft_toy, 60),
+movement5=Movement(jamnager, rajkot, women_watch, 30)
+
+movement_list=[movement1,movement2,movement3,movement4,movement5]
+
+"""for pl in product_list:
+    print(pl.name)
+print("------------------")"""
 
 print("Display product details with its stock at various locations")
 
 for pl in product_list:
     print(pl.name)
     for sl in pl.stock_at_locations:
-        print("{} - {}".format(sl.name, pl.stock_at_locations[sl]))
+        print(f"{sl.name} - {pl.stock_at_locations[sl]}")
     print("-------------------")
 
 print("Display product list by location(group by location) ")
@@ -85,9 +107,5 @@ for lol in list_of_location:
     print(lol.name)
     for pl in product_list:
         if lol in pl.stock_at_locations:
-            print("{} - {}".format(pl.name, pl.stock_at_locations[lol]))
+            print(f"{pl.name} - {pl.stock_at_locations[lol]}")
     print("-------------------")
-
-
-
-
