@@ -10,10 +10,3 @@ while list1:
     list1.append(min)
 print(list1)
 
-
-"""min=list1[0]
-while list1:
-    for i in range(list1):
-        if i >= min:
-            min=i
-    print(min)"""

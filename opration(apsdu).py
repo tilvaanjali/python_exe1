@@ -1,4 +1,4 @@
-from mymodule import *
+from oprationmod1 import *
 
 """val1 = int(input('Enter value1: '))
 val2 = int(input('Enter Value2: '))

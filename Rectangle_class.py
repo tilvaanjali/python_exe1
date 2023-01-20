@@ -1,5 +1,5 @@
 # class and object:
-"""class Rectangle:
+class Rectangle:
     def __init__(self, length, width):
         self.length = int(input("enter length:"))
         self.width = int(input("enter width:"))
@@ -18,7 +18,7 @@
 
 
 rect = Rectangle(7, 5)
-rect.display()"""
+rect.display()
 
 # Inheritance Type:
 """class person:
@@ -50,7 +50,7 @@ obj3 = employee()
 obj.person_info("arjun", 20)
 obj1.child2("reliutuin", "rajkot")
 obj2.werker_info(10000, "manager")
-obj3.child2(1, 1000000)"""
+obj3.child2(1, 1000000)
 
 
 # method overriding:
@@ -71,7 +71,7 @@ class Mother(Father):
 
 
 m = Mother()
-m.child("Anjali", 22)
+m.child("Anjali", 22)"""
 
 
 
